@@ -1,99 +1,186 @@
 # Politique de confidentialité de DupliClean
 
-**Dernière mise à jour : 27 août 2026**
+**Dernière mise à jour : 2 septembre 2026**
 
-DupliClean est une application permettant aux utilisateurs d'identifier et de gérer les fichiers en double présents sur leur appareil Android et dans leur espace Microsoft OneDrive.
+DupliClean est une application mobile permettant aux utilisateurs d’analyser et de gérer des fichiers présents sur leur appareil Android, dans Microsoft OneDrive et dans Google Drive.
 
-La présente politique de confidentialité explique comment DupliClean accède aux données et les utilise dans le cadre de ses fonctionnalités.
+DupliClean peut notamment aider l’utilisateur à repérer :
 
-## 1. Données présentes sur l'appareil
+- les doublons exacts ;
+- les photos visuellement similaires ;
+- les fichiers volumineux ;
+- les captures d’écran.
 
-DupliClean peut accéder aux photos, vidéos et autres informations nécessaires concernant les fichiers présents sur l'appareil afin de rechercher et d'identifier les fichiers en double.
+La présente politique de confidentialité explique quelles données peuvent être consultées par DupliClean, dans quel but elles sont utilisées et comment l’utilisateur garde le contrôle sur ses fichiers.
 
-Cet accès est utilisé uniquement pour fournir les fonctionnalités demandées par l'utilisateur, notamment :
+## 1. Données présentes sur l’appareil Android
 
-- sélectionner les emplacements à analyser ;
-- analyser les fichiers ;
-- identifier les fichiers en double ;
-- afficher les fichiers détectés ;
-- permettre à l'utilisateur de choisir les fichiers à conserver ou à supprimer ;
-- calculer l'espace de stockage pouvant être récupéré.
+Lorsque l’utilisateur choisit d’analyser son appareil, DupliClean peut accéder aux photos, vidéos et aux informations techniques nécessaires concernant ces fichiers, selon les autorisations accordées à l’application.
 
-DupliClean ne supprime pas automatiquement les fichiers détectés comme doublons. L'utilisateur conserve le contrôle sur les fichiers qu'il souhaite supprimer.
+Ces informations peuvent notamment inclure :
+
+- le nom du fichier ;
+- sa taille ;
+- son type ;
+- son album ou son emplacement lorsque cette information est disponible ;
+- sa date ;
+- certaines métadonnées nécessaires à l’analyse ;
+- le contenu du fichier lorsque cela est nécessaire pour calculer une empreinte permettant d’identifier un doublon exact ;
+- une miniature de l’image lorsque cela est nécessaire pour rechercher des photos visuellement similaires.
+
+Les analyses locales sont effectuées afin de fournir les fonctionnalités demandées par l’utilisateur.
+
+DupliClean ne supprime jamais automatiquement un fichier simplement parce qu’il a été détecté. L’utilisateur doit choisir les fichiers qu’il souhaite supprimer et confirmer l’opération.
 
 ## 2. Microsoft OneDrive
 
-DupliClean permet également à l'utilisateur de rechercher des fichiers en double dans son compte Microsoft OneDrive.
+DupliClean permet à l’utilisateur d’analyser des fichiers présents dans son compte Microsoft OneDrive.
 
-Lorsque cette fonctionnalité est utilisée, l'utilisateur doit s'authentifier auprès de Microsoft.
+Lorsque cette fonctionnalité est utilisée, l’utilisateur s’authentifie auprès de Microsoft et autorise DupliClean à accéder aux ressources nécessaires par l’intermédiaire des services Microsoft, notamment Microsoft Graph.
 
-DupliClean utilise les services Microsoft nécessaires à cette fonctionnalité, notamment Microsoft Graph, afin d'accéder aux fichiers OneDrive autorisés par l'utilisateur.
+Selon les fonctionnalités utilisées, DupliClean peut accéder à des informations telles que :
 
-L'application peut notamment accéder aux informations nécessaires concernant les fichiers, telles que leurs identifiants, noms, tailles, emplacements, miniatures et informations permettant de comparer les fichiers.
+- les identifiants des fichiers ;
+- les noms ;
+- les tailles ;
+- les types de fichiers ;
+- les dates ;
+- les emplacements ou informations de dossier disponibles ;
+- les miniatures ;
+- les empreintes ou informations de comparaison fournies par OneDrive, notamment lorsqu’elles sont disponibles pour détecter des doublons exacts.
 
-Lorsque l'utilisateur confirme la suppression d'un fichier OneDrive depuis DupliClean, l'application transmet la demande correspondante à Microsoft afin d'effectuer cette opération.
+Pour la recherche de photos similaires, DupliClean peut télécharger temporairement une miniature fournie par OneDrive afin d’effectuer une comparaison visuelle sur l’appareil de l’utilisateur. Cette opération sert uniquement à la fonctionnalité d’analyse demandée.
 
-L'authentification et l'accès aux services OneDrive sont également soumis aux politiques et conditions applicables de Microsoft.
+Lorsque l’utilisateur confirme la suppression d’un fichier OneDrive depuis DupliClean, l’application transmet la demande correspondante à Microsoft. Le fichier est alors traité selon le fonctionnement de la corbeille OneDrive et les règles applicables au compte de l’utilisateur.
 
-## 3. Utilisation des données
+DupliClean ne demande pas à l’utilisateur de communiquer directement son mot de passe Microsoft à l’application.
 
-Les données auxquelles DupliClean accède sont utilisées pour fournir les fonctionnalités de gestion et de détection des doublons demandées par l'utilisateur.
+L’utilisation de OneDrive reste également soumise aux politiques de confidentialité et conditions d’utilisation de Microsoft.
 
-DupliClean n'utilise pas le contenu des fichiers à des fins publicitaires.
+## 3. Google Drive
+
+DupliClean permet également à l’utilisateur d’analyser des fichiers présents dans son compte Google Drive.
+
+Lorsque cette fonctionnalité est utilisée, l’utilisateur s’authentifie auprès de Google et autorise DupliClean à accéder aux ressources nécessaires au fonctionnement de l’analyse.
+
+Selon les fonctionnalités utilisées, DupliClean peut accéder à des informations telles que :
+
+- les identifiants des fichiers ;
+- les noms ;
+- les tailles ;
+- les types de fichiers ;
+- les dates ;
+- les informations de dossier disponibles ;
+- les miniatures ;
+- les checksums ou empreintes fournis par Google Drive lorsqu’ils sont disponibles, par exemple SHA-256, SHA-1 ou MD5.
+
+Pour la recherche de photos similaires, DupliClean peut télécharger temporairement une miniature fournie par Google Drive afin d’effectuer une comparaison visuelle sur l’appareil de l’utilisateur. Cette opération sert uniquement à fournir la fonctionnalité demandée.
+
+Lorsque l’utilisateur confirme la suppression d’un fichier Google Drive depuis DupliClean, l’application transmet une demande à Google Drive afin de déplacer ce fichier vers la corbeille du compte, lorsque cette opération est prise en charge.
+
+DupliClean ne demande pas à l’utilisateur de communiquer directement son mot de passe Google à l’application.
+
+Les informations reçues des API Google sont utilisées uniquement pour fournir ou améliorer les fonctionnalités de DupliClean visibles par l’utilisateur. Elles ne sont pas utilisées pour de la publicité et ne sont pas vendues.
+
+L’utilisation de Google Drive reste également soumise aux politiques de confidentialité et conditions d’utilisation de Google.
+
+## 4. Utilisation des données
+
+Les données auxquelles DupliClean accède sont utilisées uniquement pour fournir les fonctionnalités demandées par l’utilisateur, notamment :
+
+- parcourir les emplacements sélectionnés ;
+- analyser les fichiers ;
+- identifier les doublons exacts ;
+- rechercher des photos visuellement similaires ;
+- identifier les fichiers volumineux ;
+- identifier les captures d’écran ;
+- afficher les résultats ;
+- permettre à l’utilisateur de choisir les fichiers à conserver ou à supprimer ;
+- estimer l’espace de stockage pouvant être récupéré ;
+- exécuter les suppressions explicitement confirmées par l’utilisateur.
+
+DupliClean n’utilise pas le contenu des fichiers à des fins publicitaires.
 
 DupliClean ne vend pas les fichiers, photos, vidéos ou autres données personnelles des utilisateurs.
 
-## 4. Historique des nettoyages
+## 5. Détection des doublons et photos similaires
 
-DupliClean peut conserver localement sur l'appareil un historique des opérations de nettoyage.
+Pour identifier les doublons exacts, DupliClean peut utiliser des informations techniques telles que la taille du fichier et une empreinte cryptographique ou une empreinte fournie par le service de stockage concerné.
 
-Cet historique peut contenir des informations telles que :
+Sur l’appareil Android, DupliClean peut calculer localement une empreinte SHA-256 du contenu du fichier.
 
-- la date d'une opération ;
+Pour OneDrive et Google Drive, DupliClean peut utiliser les empreintes ou checksums disponibles dans les métadonnées fournies par le service afin d’éviter de télécharger inutilement les fichiers originaux.
+
+Pour identifier des photos visuellement similaires, DupliClean peut utiliser une miniature de l’image pour calculer une empreinte perceptuelle. Cette fonctionnalité produit une estimation de similarité et les résultats sont toujours présentés à l’utilisateur avant toute suppression.
+
+## 6. Historique des nettoyages
+
+DupliClean peut conserver localement sur l’appareil un historique des opérations de nettoyage.
+
+Cet historique peut contenir notamment :
+
+- la date d’une opération ;
 - la source analysée ;
 - le nombre de fichiers supprimés ;
-- l'espace de stockage libéré.
+- l’espace de stockage libéré.
 
-Ces informations permettent à l'utilisateur de consulter l'historique de ses nettoyages.
+Cet historique est utilisé pour permettre à l’utilisateur de consulter ses opérations de nettoyage précédentes.
 
-## 5. Suppression des fichiers
+## 7. Suppression des fichiers
 
-La suppression d'un fichier n'est effectuée qu'à la suite d'une action de l'utilisateur dans l'application.
+La suppression d’un fichier n’est effectuée qu’à la suite d’une action explicite de l’utilisateur dans l’application.
 
-Pour les fichiers stockés sur OneDrive, DupliClean utilise les services Microsoft afin d'exécuter la suppression demandée par l'utilisateur.
+DupliClean présente les fichiers détectés et laisse l’utilisateur choisir ceux qu’il souhaite conserver ou supprimer.
+
+Pour les fichiers cloud :
+
+- OneDrive utilise les services Microsoft pour exécuter la suppression demandée ;
+- Google Drive utilise les services Google pour déplacer les fichiers concernés vers la corbeille lorsque cette fonctionnalité est disponible.
 
 Les utilisateurs doivent vérifier les fichiers sélectionnés avant de confirmer une suppression.
 
-## 6. Partage et vente de données
+## 8. Partage et vente de données
 
 DupliClean ne vend pas les données personnelles des utilisateurs.
 
-Les données nécessaires au fonctionnement de OneDrive peuvent être échangées avec les services Microsoft lorsque l'utilisateur utilise les fonctionnalités OneDrive.
+DupliClean ne partage pas les fichiers de l’utilisateur avec des annonceurs.
 
-## 7. Sécurité
+Lorsque l’utilisateur utilise une fonctionnalité cloud, certaines informations nécessaires à l’opération sont naturellement échangées avec le fournisseur du service concerné :
 
-DupliClean vise à limiter l'accès aux données aux fonctionnalités nécessaires au fonctionnement de l'application.
+- Microsoft pour OneDrive ;
+- Google pour Google Drive.
 
-L'utilisateur reste responsable de la sécurité de son appareil, de son compte Microsoft et de ses identifiants.
+Ces échanges sont nécessaires pour accéder aux fichiers autorisés, récupérer leurs métadonnées ou miniatures et exécuter les actions demandées par l’utilisateur.
 
-## 8. Services tiers
+## 9. Sécurité
 
-DupliClean peut interagir avec les services Microsoft lorsque l'utilisateur choisit d'utiliser les fonctionnalités OneDrive.
+DupliClean vise à limiter l’accès aux données aux fonctionnalités nécessaires au fonctionnement de l’application.
 
-Microsoft traite certaines informations conformément à ses propres politiques de confidentialité et conditions d'utilisation.
+L’application utilise les mécanismes d’authentification et d’autorisation fournis par Microsoft et Google pour l’accès aux comptes cloud.
 
-## 9. Confidentialité des enfants
+L’utilisateur reste responsable de la sécurité de son appareil et de ses comptes Microsoft et Google.
 
-DupliClean n'est pas spécifiquement destinée aux enfants et ne vise pas à collecter sciemment des informations personnelles concernant des enfants.
+## 10. Services tiers
 
-## 10. Modifications de cette politique
+DupliClean peut interagir avec les services tiers suivants lorsque l’utilisateur choisit de les utiliser :
 
-Cette politique de confidentialité peut être mise à jour afin de refléter les évolutions de DupliClean, de ses fonctionnalités ou des exigences applicables.
+- Microsoft OneDrive / Microsoft Graph ;
+- Google Drive / Google APIs.
 
-La date de dernière mise à jour indiquée en haut de cette page permettra d'identifier la version la plus récente.
+Ces fournisseurs traitent certaines informations conformément à leurs propres politiques de confidentialité et conditions d’utilisation.
 
-## 11. Contact
+## 11. Confidentialité des enfants
 
-Pour toute question concernant cette politique de confidentialité ou l'utilisation des données par DupliClean, vous pouvez contacter le développeur à l'adresse suivante :
+DupliClean n’est pas spécifiquement destinée aux enfants et ne vise pas à collecter sciemment des informations personnelles concernant des enfants.
+
+## 12. Modifications de cette politique
+
+Cette politique de confidentialité peut être mise à jour afin de refléter les évolutions de DupliClean, de ses fonctionnalités, de ses intégrations cloud ou des exigences applicables.
+
+La date de dernière mise à jour indiquée en haut de cette page permet d’identifier la version la plus récente.
+
+## 13. Contact
+
+Pour toute question concernant cette politique de confidentialité ou l’utilisation des données par DupliClean, vous pouvez contacter le développeur à l’adresse suivante :
 
 **claudeaboki@gmail.com**
