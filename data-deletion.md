@@ -1,4 +1,4 @@
-# Suppression des données / Data Deletion — DupliClean
+# Gestion et suppression des données locales / Local Data Management and Deletion — DupliClean
 
 - [Français](#français)
 - [English](#english)
@@ -7,112 +7,102 @@
 
 # Français
 
-## Demander la suppression de vos données DupliClean
+## Comment DupliClean gère vos données
 
-DupliClean ne crée pas de compte DupliClean distinct. L’application peut toutefois utiliser des comptes Google ou Microsoft existants pour accéder à Google Drive ou OneDrive lorsque vous choisissez ces sources.
+DupliClean ne crée pas de compte DupliClean distinct et ne conserve pas sur un serveur exploité par le développeur des copies de vos fichiers, photos, vidéos, miniatures ou résultats d’analyse.
 
-Pour demander la suppression de toute donnée associée à votre utilisation de DupliClean qui pourrait être conservée par le développeur, envoyez un courriel à :
+Les analyses effectuées par DupliClean utilisent les données disponibles sur votre appareil ou auprès du service cloud que vous avez choisi, notamment OneDrive ou Google Drive.
 
-**claudeaboki@gmail.com**
+Les préférences de l’application et l’historique des nettoyages sont conservés localement sur votre appareil.
 
-Objet recommandé :
+## Supprimer les données locales de DupliClean
 
-**DupliClean — Demande de suppression de données**
+Vous pouvez supprimer les données locales conservées par DupliClean directement depuis votre appareil Android.
 
-Dans votre message, indiquez :
+Vous pouvez notamment :
 
-1. que votre demande concerne **DupliClean** ;
-2. l’adresse e-mail du compte Google ou Microsoft utilisé avec l’application, si cela est nécessaire pour identifier votre demande ;
-3. les données que vous souhaitez faire supprimer.
-
-**N’envoyez jamais votre mot de passe Google ou Microsoft.**
-
-## Données concernées
-
-Selon les fonctionnalités utilisées, les données associées à DupliClean peuvent inclure :
-
-- des préférences et paramètres enregistrés localement dans l’application ;
-- l’historique local des opérations de nettoyage ;
-- des informations d’authentification ou de session conservées localement sur l’appareil ;
-- des informations fournies volontairement dans le cadre d’une demande de support ou de suppression de données.
-
-DupliClean n’a pas pour objectif de conserver sur un serveur du développeur des copies permanentes de vos fichiers OneDrive, Google Drive, photos, vidéos, miniatures ou métadonnées de fichiers utilisées pour l’analyse.
-
-## Comment supprimer les données locales
-
-Vous pouvez supprimer les données locales de DupliClean directement depuis votre appareil :
-
-- effacer l’historique depuis l’application lorsque cette option est disponible ;
-- effacer les données de l’application depuis les paramètres Android ;
+- effacer l’historique des nettoyages depuis l’application lorsque cette option est disponible ;
+- ouvrir les paramètres Android, accéder aux informations de l’application DupliClean et utiliser l’option permettant d’effacer les données ou le stockage de l’application ;
 - désinstaller DupliClean.
 
-L’effacement des données de l’application ou sa désinstallation supprime les données locales stockées par DupliClean sur l’appareil.
+L’effacement des données de l’application ou sa désinstallation supprime les données locales de DupliClean présentes sur l’appareil.
 
-## Données OneDrive et Google Drive
+## OneDrive et Google Drive
 
-Les fichiers stockés dans OneDrive ou Google Drive restent gérés par Microsoft ou Google.
+Les fichiers présents dans OneDrive ou Google Drive restent stockés et gérés par Microsoft ou Google.
+
+DupliClean n’en conserve pas de copie permanente sur un serveur du développeur.
 
 Lorsque vous confirmez la suppression d’un fichier cloud dans DupliClean, l’application transmet la demande au fournisseur concerné afin de déplacer le fichier vers sa corbeille lorsque cette fonctionnalité est disponible.
 
-Pour supprimer d’autres données détenues directement par Microsoft ou Google, utilisez les outils de gestion de compte et de confidentialité du fournisseur concerné.
+Si vous souhaitez supprimer d’autres données détenues directement par Microsoft ou Google, vous devez utiliser les outils de gestion de compte et de confidentialité proposés par le fournisseur concerné.
 
-## Délai de traitement et conservation
+## Accès aux comptes Google et Microsoft
 
-Les demandes reçues par e-mail sont traitées dans un délai raisonnable. Les informations nécessaires au traitement de la demande sont conservées uniquement le temps nécessaire pour répondre et documenter la demande, puis supprimées, sauf si une conservation plus longue est requise par une obligation légale ou de sécurité.
+DupliClean peut utiliser un compte Google ou Microsoft existant afin d’accéder à Google Drive ou OneDrive lorsque vous choisissez ces sources.
+
+DupliClean ne crée pas ces comptes et ne gère pas leur suppression.
+
+Vous pouvez retirer l’autorisation accordée à DupliClean depuis les paramètres de sécurité ou de confidentialité de votre compte Google ou Microsoft.
+
+## Demande de suppression côté développeur
+
+DupliClean ne conserve pas de données d’analyse utilisateur sur un serveur exploité par le développeur. Il n’existe donc normalement pas de données DupliClean côté serveur à faire supprimer sur demande.
+
+Pour toute question concernant la confidentialité ou le fonctionnement de l’application, vous pouvez contacter le développeur à l’adresse suivante :
+
+**claudeaboki@gmail.com**
+
+**N’envoyez jamais votre mot de passe Google ou Microsoft.**
 
 ---
 
 # English
 
-## Request deletion of your DupliClean data
+## How DupliClean handles your data
 
-DupliClean does not create a separate DupliClean account. However, the app may use an existing Google or Microsoft account to access Google Drive or OneDrive when you choose those sources.
+DupliClean does not create a separate DupliClean account and does not keep copies of your files, photos, videos, thumbnails, or analysis results on a developer-operated server.
 
-To request deletion of any data associated with your use of DupliClean that may be retained by the developer, send an email to:
+DupliClean performs its analysis using data available on your device or from the cloud service you choose, including OneDrive or Google Drive.
 
-**claudeaboki@gmail.com**
+App preferences and cleanup history are stored locally on your device.
 
-Recommended subject:
+## Delete DupliClean local data
 
-**DupliClean — Data deletion request**
+You can delete locally stored DupliClean data directly from your Android device.
 
-In your message, include:
+You can:
 
-1. that your request concerns **DupliClean**;
-2. the email address of the Google or Microsoft account used with the app, if needed to identify your request;
-3. the data you want deleted.
+- clear cleanup history from the app when that option is available;
+- open Android settings, go to DupliClean app information, and use the option to clear the app's data or storage;
+- uninstall DupliClean.
 
-**Never send your Google or Microsoft password.**
+Clearing app data or uninstalling DupliClean removes locally stored DupliClean data from the device.
 
-## Data covered by the request
+## OneDrive and Google Drive
 
-Depending on the features used, data associated with DupliClean may include:
+Files stored in OneDrive or Google Drive remain stored and managed by Microsoft or Google.
 
-- preferences and settings stored locally by the app;
-- local cleanup history;
-- authentication or session information stored locally on the device;
-- information voluntarily provided in a support or data deletion request.
-
-DupliClean is not intended to keep permanent copies on developer-operated servers of your OneDrive files, Google Drive files, photos, videos, thumbnails, or file metadata used for analysis.
-
-## How to delete local data
-
-You can remove local DupliClean data directly from your device by:
-
-- clearing cleanup history from the app when that option is available;
-- clearing the app's storage from Android settings;
-- uninstalling DupliClean.
-
-Clearing app storage or uninstalling DupliClean removes local data stored by DupliClean on the device.
-
-## OneDrive and Google Drive data
-
-Files stored in OneDrive or Google Drive remain managed by Microsoft or Google.
+DupliClean does not keep permanent copies of those files on a developer-operated server.
 
 When you confirm deletion of a cloud file in DupliClean, the app sends the request to the relevant provider so the file can be moved to that provider's trash or recycle bin when supported.
 
-To delete other data held directly by Microsoft or Google, use the account and privacy management tools provided by the relevant service.
+If you want to delete other data held directly by Microsoft or Google, use the account and privacy management tools provided by the relevant service.
 
-## Processing and retention
+## Google and Microsoft account access
 
-Email deletion requests are handled within a reasonable period. Information needed to process the request is retained only as long as necessary to respond to and document the request, and is then deleted unless longer retention is required for legal or security reasons.
+DupliClean may use an existing Google or Microsoft account to access Google Drive or OneDrive when you choose those sources.
+
+DupliClean does not create those accounts and does not manage their deletion.
+
+You can revoke DupliClean's authorization from the security or privacy settings of your Google or Microsoft account.
+
+## Developer-side deletion requests
+
+DupliClean does not retain user analysis data on a developer-operated server. Therefore, there is normally no DupliClean server-side user data that needs to be deleted on request.
+
+For privacy or app-related questions, you may contact the developer at:
+
+**claudeaboki@gmail.com**
+
+**Never send your Google or Microsoft password.**
