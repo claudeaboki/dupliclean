@@ -7,7 +7,7 @@
 
 # Français
 
-**Dernière mise à jour : 7 septembre 2026**
+**Dernière mise à jour : 15 septembre 2026**
 
 ## Comment DupliClean gère vos données
 
@@ -23,9 +23,13 @@ Vous pouvez supprimer les données locales conservées par DupliClean directemen
 
 Vous pouvez notamment :
 
-- effacer l’historique des nettoyages depuis l’application ;
+- supprimer une entrée précise de l’historique des nettoyages depuis l’application ;
+- sélectionner plusieurs entrées d’historique et les supprimer en une seule opération ;
+- effacer l’ensemble de l’historique des nettoyages depuis l’application ;
 - ouvrir les paramètres Android, accéder aux informations de l’application DupliClean et utiliser l’option permettant d’effacer les données ou le stockage de l’application ;
 - désinstaller DupliClean.
+
+La suppression d’une ou plusieurs entrées de l’historique retire uniquement ces informations locales de l’historique DupliClean. Elle ne supprime pas les fichiers correspondants de votre téléphone, de OneDrive ou de Google Drive.
 
 L’effacement des données de l’application ou sa désinstallation supprime les préférences et autres données locales DupliClean présentes sur l’appareil.
 
@@ -74,7 +78,7 @@ Pour toute question concernant la confidentialité ou le fonctionnement de l’a
 
 # English
 
-**Last updated: September 7, 2026**
+**Last updated: September 15, 2026**
 
 ## How DupliClean handles your data
 
@@ -90,9 +94,13 @@ You can delete locally stored DupliClean data directly from your Android device.
 
 You can:
 
-- clear cleanup history from the app;
+- delete a specific cleanup-history entry from the app;
+- select multiple history entries and delete them in a single operation;
+- clear the entire cleanup history from the app;
 - open Android settings, go to DupliClean app information, and use the option to clear the app's data or storage;
 - uninstall DupliClean.
+
+Deleting one or more cleanup-history entries removes only those local DupliClean history records. It does not delete the corresponding files from your phone, OneDrive, or Google Drive.
 
 Clearing app data or uninstalling DupliClean removes locally stored DupliClean preferences and other local app data from the device.
 
