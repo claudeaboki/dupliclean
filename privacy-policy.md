@@ -7,7 +7,7 @@
 
 # Français
 
-**Dernière mise à jour : 7 septembre 2026**
+**Dernière mise à jour : 18 septembre 2026**
 
 DupliClean est une application mobile Android permettant aux utilisateurs d’analyser et de gérer des fichiers présents sur leur appareil, dans Microsoft OneDrive et dans Google Drive.
 
@@ -92,6 +92,18 @@ Lorsque l’utilisateur confirme la suppression d’un fichier Google Drive depu
 DupliClean ne demande pas à l’utilisateur de communiquer directement son mot de passe Google à l’application.
 
 Les informations reçues des API Google sont utilisées uniquement pour fournir ou améliorer les fonctionnalités de DupliClean visibles par l’utilisateur. Elles ne sont pas utilisées pour de la publicité et ne sont pas vendues.
+
+### Utilisation limitée des données Google
+
+L’utilisation par DupliClean des informations brutes ou dérivées reçues des API Google Workspace respecte la **Google API Services User Data Policy**, y compris les exigences de **Limited Use**.
+
+En particulier :
+
+- les données Google ne sont utilisées que pour fournir ou améliorer les fonctionnalités visibles et demandées par l’utilisateur dans DupliClean ;
+- les données Google ne sont pas utilisées pour développer, améliorer ou entraîner des modèles d’intelligence artificielle ou d’apprentissage automatique généralisés ou non personnalisés ;
+- les données Google ne sont pas transférées à des services tiers d’intelligence artificielle ou d’apprentissage automatique afin d’entraîner ou d’améliorer leurs modèles ;
+- les données Google ne sont pas vendues, utilisées pour la publicité, le profilage publicitaire ou le ciblage publicitaire ;
+- DupliClean ne crée pas de copies permanentes des données Google sur un serveur exploité par le développeur.
 
 L’utilisation de Google Drive reste soumise aux politiques de confidentialité et conditions d’utilisation de Google.
 
@@ -212,7 +224,7 @@ Pour toute question concernant cette politique de confidentialité ou l’utilis
 
 # English
 
-**Last updated: September 7, 2026**
+**Last updated: September 18, 2026**
 
 DupliClean is an Android mobile application that allows users to analyze and manage files stored on their device, in Microsoft OneDrive, and in Google Drive.
 
@@ -297,6 +309,18 @@ When the user confirms the deletion of a Google Drive file from DupliClean, the 
 DupliClean does not ask the user to provide their Google password directly to the application.
 
 Information received from Google APIs is used only to provide or improve user-facing DupliClean features. It is not used for advertising and is not sold.
+
+### Limited Use of Google user data
+
+DupliClean's use of raw or derived information received from Google Workspace APIs adheres to the **Google API Services User Data Policy**, including the **Limited Use** requirements.
+
+In particular:
+
+- Google user data is used only to provide or improve user-facing features requested by the user in DupliClean;
+- Google user data is not used to develop, improve, or train generalized or non-personalized artificial intelligence or machine-learning models;
+- Google user data is not transferred to third-party AI or machine-learning services for the purpose of training or improving their models;
+- Google user data is not sold or used for advertising, advertising profiling, or advertising targeting;
+- DupliClean does not create permanent copies of Google user data on a developer-operated server.
 
 Use of Google Drive remains subject to Google's applicable privacy policies and terms of use.
 
