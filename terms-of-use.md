@@ -7,7 +7,7 @@
 
 # Français
 
-**Dernière mise à jour : 7 septembre 2026**
+**Dernière mise à jour : 21 septembre 2026**
 
 ## 1. Acceptation des conditions
 
@@ -19,7 +19,8 @@ DupliClean est une application Android qui aide l’utilisateur à analyser des 
 
 - le stockage local du téléphone ;
 - Microsoft OneDrive ;
-- Google Drive.
+- Google Drive ;
+- Dropbox.
 
 Selon la source et les fonctionnalités utilisées, DupliClean peut aider à identifier :
 
@@ -44,7 +45,7 @@ Certaines fonctionnalités nécessitent l’autorisation d’accéder aux photos
 
 Sur les versions récentes d’Android, l’utilisateur peut accorder un accès complet ou limité à certains médias sélectionnés.
 
-Pour OneDrive et Google Drive, l’utilisateur doit autoriser DupliClean à accéder aux ressources nécessaires via les mécanismes d’authentification et d’autorisation fournis par Microsoft ou Google.
+Pour OneDrive, Google Drive et Dropbox, l’utilisateur doit autoriser DupliClean à accéder aux ressources nécessaires via les mécanismes d’authentification et d’autorisation fournis par Microsoft, Google ou Dropbox.
 
 L’utilisateur peut retirer ces autorisations à tout moment depuis Android ou depuis les paramètres de sécurité et de confidentialité du fournisseur cloud concerné.
 
@@ -52,9 +53,9 @@ L’utilisateur peut retirer ces autorisations à tout moment depuis Android ou 
 
 DupliClean ne crée pas de compte utilisateur DupliClean distinct.
 
-Lorsqu’un utilisateur se connecte à OneDrive ou Google Drive, l’authentification est réalisée par Microsoft ou Google. DupliClean ne demande pas à l’utilisateur de saisir directement son mot de passe Microsoft ou Google dans l’application.
+Lorsqu’un utilisateur se connecte à OneDrive, Google Drive ou Dropbox, l’authentification est réalisée par le fournisseur concerné. DupliClean ne demande pas à l’utilisateur de saisir directement son mot de passe Microsoft, Google ou Dropbox dans l’application.
 
-L’utilisation de OneDrive et Google Drive reste soumise aux conditions d’utilisation, politiques de confidentialité et règles propres à Microsoft et Google.
+L’utilisation de OneDrive, Google Drive et Dropbox reste soumise aux conditions d’utilisation, politiques de confidentialité et règles propres à Microsoft, Google et Dropbox.
 
 ## 6. Suppression des fichiers
 
@@ -62,7 +63,8 @@ Lorsque l’utilisateur confirme une suppression :
 
 - les fichiers locaux sont supprimés selon les mécanismes disponibles sur l’appareil Android ;
 - les fichiers OneDrive sont traités selon les mécanismes de suppression et de corbeille de Microsoft ;
-- les fichiers Google Drive peuvent être déplacés vers la corbeille selon les mécanismes de Google Drive.
+- les fichiers Google Drive peuvent être déplacés vers la corbeille selon les mécanismes de Google Drive ;
+- les fichiers Dropbox sont supprimés au moyen des mécanismes fournis par Dropbox après confirmation de l’utilisateur.
 
 DupliClean ne garantit pas qu’un fichier supprimé pourra être restauré. L’utilisateur doit vérifier les possibilités de récupération auprès de la source concernée.
 
@@ -81,7 +83,7 @@ L’utilisateur est responsable :
 - de la vérification des résultats affichés ;
 - de la sélection des fichiers à supprimer ;
 - du maintien de sauvegardes appropriées lorsque cela est nécessaire ;
-- de la sécurité de son appareil et de ses comptes Google et Microsoft.
+- de la sécurité de son appareil et de ses comptes Google, Microsoft et Dropbox.
 
 ## 9. Disponibilité du service
 
@@ -90,7 +92,7 @@ Certaines fonctionnalités peuvent dépendre :
 - de la version d’Android ;
 - des autorisations accordées ;
 - de la connexion réseau ;
-- de la disponibilité des services Microsoft ou Google ;
+- de la disponibilité des services Microsoft, Google ou Dropbox ;
 - des limites ou changements apportés par les fournisseurs cloud.
 
 DupliClean peut être modifié, amélioré ou interrompu en tout ou en partie au fil du temps.
@@ -123,7 +125,7 @@ Pour toute question concernant DupliClean ou les présentes Conditions d’utili
 
 # English
 
-**Last updated: September 7, 2026**
+**Last updated: September 21, 2026**
 
 ## 1. Acceptance of the terms
 
@@ -135,7 +137,8 @@ DupliClean is an Android application that helps users analyze files from support
 
 - local phone storage;
 - Microsoft OneDrive;
-- Google Drive.
+- Google Drive;
+- Dropbox.
 
 Depending on the source and features used, DupliClean can help identify:
 
@@ -160,7 +163,7 @@ Some features require permission to access photos, videos, or other information 
 
 On recent Android versions, users may grant full access or limited access to selected media.
 
-For OneDrive and Google Drive, users must authorize DupliClean to access the required resources through authentication and authorization mechanisms provided by Microsoft or Google.
+For OneDrive, Google Drive, and Dropbox, users must authorize DupliClean to access the required resources through authentication and authorization mechanisms provided by Microsoft, Google, or Dropbox.
 
 Users can revoke these permissions at any time through Android or through the relevant cloud provider's security and privacy settings.
 
@@ -168,9 +171,9 @@ Users can revoke these permissions at any time through Android or through the re
 
 DupliClean does not create a separate DupliClean user account.
 
-When users connect to OneDrive or Google Drive, authentication is handled by Microsoft or Google. DupliClean does not ask users to enter their Microsoft or Google password directly into the application.
+When users connect to OneDrive, Google Drive, or Dropbox, authentication is handled by the relevant provider. DupliClean does not ask users to enter their Microsoft, Google, or Dropbox password directly into the application.
 
-Use of OneDrive and Google Drive remains subject to the terms, privacy policies, and rules of Microsoft and Google.
+Use of OneDrive, Google Drive, and Dropbox remains subject to the terms, privacy policies, and rules of Microsoft, Google, and Dropbox.
 
 ## 6. File deletion
 
@@ -178,7 +181,8 @@ When a user confirms a deletion:
 
 - local files are deleted using the mechanisms available on the Android device;
 - OneDrive files are handled according to Microsoft's deletion and recycle-bin mechanisms;
-- Google Drive files may be moved to the trash according to Google Drive mechanisms.
+- Google Drive files may be moved to the trash according to Google Drive mechanisms;
+- Dropbox files are deleted using mechanisms provided by Dropbox after user confirmation.
 
 DupliClean does not guarantee that a deleted file can be restored. Users should verify recovery options with the relevant source.
 
@@ -197,7 +201,7 @@ Users are responsible for:
 - reviewing displayed results;
 - selecting files to delete;
 - maintaining appropriate backups when necessary;
-- securing their device and Google and Microsoft accounts.
+- securing their device and Google, Microsoft, and Dropbox accounts.
 
 ## 9. Service availability
 
@@ -206,7 +210,7 @@ Some features may depend on:
 - the Android version;
 - permissions granted by the user;
 - network connectivity;
-- availability of Microsoft or Google services;
+- availability of Microsoft, Google, or Dropbox services;
 - limitations or changes introduced by cloud providers.
 
 DupliClean may be modified, improved, or discontinued in whole or in part over time.
