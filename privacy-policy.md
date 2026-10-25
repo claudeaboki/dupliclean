@@ -7,14 +7,15 @@
 
 # Français
 
-**Dernière mise à jour : 21 septembre 2026**
+**Dernière mise à jour : 24 octobre 2026**
 
-DupliClean est une application mobile Android permettant aux utilisateurs d’analyser et de gérer des fichiers présents sur leur appareil, dans Microsoft OneDrive, dans Google Drive et dans Dropbox.
+DupliClean est une application mobile Android permettant aux utilisateurs d’analyser et de gérer des fichiers présents sur leur appareil, dans Microsoft OneDrive, dans Dropbox et dans MEGA.
 
 DupliClean peut notamment aider l’utilisateur à repérer :
 
 - les doublons exacts ;
 - les photos visuellement similaires ;
+- les vidéos similaires lorsque cette analyse est activée ;
 - les fichiers volumineux ;
 - les captures d’écran.
 
@@ -68,44 +69,17 @@ DupliClean ne demande pas à l’utilisateur de communiquer directement son mot 
 
 L’utilisation de OneDrive reste soumise aux politiques de confidentialité et conditions d’utilisation de Microsoft.
 
-## 3. Google Drive
+## 3. MEGA
 
-DupliClean permet également à l’utilisateur d’analyser des fichiers présents dans son compte Google Drive.
+DupliClean permet à l’utilisateur d’analyser les dossiers et fichiers de son compte MEGA au moyen du SDK Android officiel de MEGA.
 
-Lorsque cette fonctionnalité est utilisée, l’utilisateur s’authentifie auprès de Google et autorise DupliClean à accéder aux ressources nécessaires au fonctionnement de l’analyse.
+L’utilisateur saisit dans DupliClean son adresse e-mail, son mot de passe et, si nécessaire, un code de vérification. L’application transmet ces informations au SDK MEGA pour ouvrir la session. DupliClean enregistre la session MEGA dans le stockage sécurisé de l’appareil afin de pouvoir la restaurer ; la déconnexion supprime cette session enregistrée.
 
-Selon les fonctionnalités utilisées, DupliClean peut accéder à des informations telles que :
+Selon les fonctionnalités utilisées, DupliClean peut accéder aux noms, identifiants, tailles, types, dates, dossiers, métadonnées de comparaison et miniatures des fichiers. Pour vérifier des doublons exacts ou analyser des médias, l’application peut télécharger temporairement le contenu de fichiers sur l’appareil et calculer localement des empreintes. Les données téléchargées pour l’analyse ne sont pas transmises à un serveur exploité par le développeur.
 
-- les identifiants des fichiers ;
-- les noms ;
-- les tailles ;
-- les types de fichiers ;
-- les dates ;
-- les informations de dossier disponibles ;
-- les miniatures ;
-- les checksums ou empreintes fournis par Google Drive lorsqu’ils sont disponibles, par exemple SHA-256, SHA-1 ou MD5.
+Lorsque l’utilisateur confirme la suppression d’un fichier MEGA dans DupliClean, l’application demande au SDK MEGA de le déplacer vers la corbeille du compte. La conservation et la récupération éventuelle dépendent des règles de MEGA et du compte de l’utilisateur.
 
-Pour certaines analyses, notamment la recherche de photos similaires, DupliClean peut télécharger temporairement une miniature fournie par Google Drive afin d’effectuer une comparaison visuelle dans l’application.
-
-Lorsque l’utilisateur confirme la suppression d’un fichier Google Drive depuis DupliClean, l’application transmet une demande à Google Drive afin de déplacer ce fichier vers la corbeille du compte lorsque cette opération est prise en charge.
-
-DupliClean ne demande pas à l’utilisateur de communiquer directement son mot de passe Google à l’application.
-
-Les informations reçues des API Google sont utilisées uniquement pour fournir ou améliorer les fonctionnalités de DupliClean visibles par l’utilisateur. Elles ne sont pas utilisées pour de la publicité et ne sont pas vendues.
-
-### Utilisation limitée des données Google
-
-L’utilisation par DupliClean des informations brutes ou dérivées reçues des API Google Workspace respecte la **Google API Services User Data Policy**, y compris les exigences de **Limited Use**.
-
-En particulier :
-
-- les données Google ne sont utilisées que pour fournir ou améliorer les fonctionnalités visibles et demandées par l’utilisateur dans DupliClean ;
-- les données Google ne sont pas utilisées pour développer, améliorer ou entraîner des modèles d’intelligence artificielle ou d’apprentissage automatique généralisés ou non personnalisés ;
-- les données Google ne sont pas transférées à des services tiers d’intelligence artificielle ou d’apprentissage automatique afin d’entraîner ou d’améliorer leurs modèles ;
-- les données Google ne sont pas vendues, utilisées pour la publicité, le profilage publicitaire ou le ciblage publicitaire ;
-- DupliClean ne crée pas de copies permanentes des données Google sur un serveur exploité par le développeur.
-
-L’utilisation de Google Drive reste soumise aux politiques de confidentialité et conditions d’utilisation de Google.
+L’utilisation de MEGA reste soumise aux politiques de confidentialité et conditions d’utilisation de MEGA.
 
 ## 4. Dropbox
 
@@ -136,7 +110,7 @@ L’utilisation de Dropbox reste soumise aux politiques de confidentialité et c
 
 ## 5. Informations liées à l’authentification cloud
 
-Lorsque l’utilisateur choisit de se connecter à Google Drive, OneDrive ou Dropbox, le fournisseur d’authentification peut transmettre à DupliClean certaines informations associées au compte, par exemple le nom, l’adresse e-mail ou un identifiant de compte/utilisateur.
+Lorsqu’un utilisateur se connecte à OneDrive ou Dropbox, le fournisseur d’authentification peut transmettre à DupliClean des informations associées au compte, par exemple le nom, l’adresse e-mail ou un identifiant. Pour MEGA, l’adresse e-mail et les informations de connexion saisies dans l’application sont utilisées par le SDK MEGA pour ouvrir la session ; la session est enregistrée dans le stockage sécurisé de l’appareil.
 
 Ces informations sont utilisées uniquement pour permettre l’authentification, établir la session avec le service choisi et fournir les fonctionnalités cloud demandées par l’utilisateur.
 
@@ -150,6 +124,7 @@ Les données auxquelles DupliClean accède sont utilisées uniquement pour fourn
 - analyser les fichiers ;
 - identifier les doublons exacts ;
 - rechercher des photos visuellement similaires ;
+- rechercher des vidéos similaires lorsque cette option est activée ;
 - identifier les fichiers volumineux ;
 - identifier les captures d’écran ;
 - afficher les résultats ;
@@ -165,7 +140,7 @@ Pour identifier les doublons exacts, DupliClean peut utiliser des informations t
 
 Sur l’appareil Android, DupliClean peut calculer localement une empreinte SHA-256 du contenu du fichier.
 
-Pour OneDrive, Google Drive et Dropbox, DupliClean peut utiliser les empreintes, checksums ou informations de comparaison disponibles dans les métadonnées fournies par le service afin d’éviter de télécharger inutilement les fichiers originaux.
+Pour OneDrive, Dropbox et MEGA, DupliClean peut utiliser les empreintes ou informations de comparaison disponibles dans les métadonnées pour présélectionner les fichiers. Certains contenus doivent néanmoins être téléchargés temporairement sur l’appareil pour vérifier une correspondance ou analyser des médias.
 
 Pour identifier des photos visuellement similaires, DupliClean peut utiliser une miniature de l’image pour calculer une empreinte perceptuelle. Cette fonctionnalité produit une estimation de similarité et les résultats sont toujours présentés à l’utilisateur avant toute suppression.
 
@@ -191,8 +166,8 @@ DupliClean présente les fichiers détectés et laisse l’utilisateur choisir c
 Pour les fichiers cloud :
 
 - OneDrive utilise les services Microsoft pour exécuter la suppression demandée selon les règles de OneDrive ;
-- Google Drive utilise les services Google pour déplacer les fichiers concernés vers la corbeille lorsque cette fonctionnalité est disponible ;
-- Dropbox utilise les services Dropbox pour exécuter la suppression explicitement demandée par l’utilisateur.
+- Dropbox utilise les services Dropbox pour exécuter la suppression explicitement demandée par l’utilisateur ;
+- MEGA déplace les fichiers sélectionnés vers la corbeille du compte.
 
 Les utilisateurs doivent vérifier les fichiers sélectionnés avant de confirmer une suppression.
 
@@ -203,8 +178,8 @@ DupliClean ne vend pas les données personnelles des utilisateurs et ne partage 
 Lorsque l’utilisateur utilise une fonctionnalité cloud, certaines informations nécessaires à l’opération sont échangées avec le fournisseur du service concerné :
 
 - Microsoft pour OneDrive ;
-- Google pour Google Drive ;
-- Dropbox pour Dropbox.
+- Dropbox pour Dropbox ;
+- MEGA pour MEGA.
 
 Ces échanges sont nécessaires pour authentifier l’utilisateur, accéder aux fichiers autorisés, récupérer les métadonnées ou miniatures nécessaires et exécuter les actions demandées par l’utilisateur.
 
@@ -214,23 +189,25 @@ DupliClean ne conserve pas de copies permanentes des fichiers, photos, vidéos, 
 
 Les préférences et l’historique de nettoyage conservés par DupliClean restent localement sur l’appareil et peuvent être supprimés par l’utilisateur en effaçant les données de l’application ou en désinstallant DupliClean. L’historique peut également être effacé depuis l’application lorsque cette option est disponible.
 
-Les données conservées directement par Microsoft, Google ou Dropbox restent soumises aux règles de conservation et de suppression de ces fournisseurs.
+Des miniatures ou fichiers peuvent être conservés temporairement dans le cache de l’application sur l’appareil pour l’analyse ou l’aperçu. L’utilisateur peut effacer les données de l’application dans Android pour supprimer ce cache et les sessions locales.
+
+Les données conservées directement par Microsoft, Dropbox ou MEGA restent soumises aux règles de conservation et de suppression de ces fournisseurs.
 
 ## 12. Sécurité
 
 DupliClean vise à limiter l’accès aux données aux fonctionnalités nécessaires au fonctionnement de l’application.
 
-L’application utilise les mécanismes d’authentification et d’autorisation fournis par Microsoft, Google et Dropbox pour l’accès aux comptes cloud.
+L’application utilise les mécanismes d’authentification de Microsoft et Dropbox ainsi que le SDK MEGA pour l’accès aux comptes cloud.
 
-L’utilisateur reste responsable de la sécurité de son appareil et de ses comptes Microsoft, Google et Dropbox.
+L’utilisateur reste responsable de la sécurité de son appareil et de ses comptes Microsoft, Dropbox et MEGA.
 
 ## 13. Services tiers
 
 DupliClean peut interagir avec les services tiers suivants lorsque l’utilisateur choisit de les utiliser :
 
 - Microsoft OneDrive / Microsoft Graph ;
-- Google Drive / Google APIs ;
-- Dropbox / Dropbox API.
+- Dropbox / Dropbox API ;
+- MEGA / SDK MEGA.
 
 Ces fournisseurs traitent certaines informations conformément à leurs propres politiques de confidentialité et conditions d’utilisation.
 
@@ -254,14 +231,15 @@ Pour toute question concernant cette politique de confidentialité ou l’utilis
 
 # English
 
-**Last updated: September 21, 2026**
+**Last updated: October 24, 2026**
 
-DupliClean is an Android mobile application that allows users to analyze and manage files stored on their device, in Microsoft OneDrive, in Google Drive, and in Dropbox.
+DupliClean is an Android mobile application that allows users to analyze and manage files stored on their device, in Microsoft OneDrive, in Dropbox, and in MEGA.
 
 DupliClean can help users identify, among other things:
 
 - exact duplicates;
 - visually similar photos;
+- similar videos when that analysis is enabled;
 - large files;
 - screenshots.
 
@@ -315,44 +293,17 @@ DupliClean does not ask the user to provide their Microsoft password directly to
 
 Use of OneDrive remains subject to Microsoft's applicable privacy policies and terms of use.
 
-## 3. Google Drive
+## 3. MEGA
 
-DupliClean also allows users to analyze files stored in their Google Drive account.
+DupliClean allows users to analyze folders and files in their MEGA account through the official MEGA Android SDK.
 
-When this feature is used, the user authenticates with Google and authorizes DupliClean to access the resources required for the analysis to function.
+Users enter their email address, password, and, if required, a verification code in DupliClean. The app passes these details to the MEGA SDK to start the session. DupliClean stores the MEGA session in secure storage on the device so it can be restored; signing out removes that stored session.
 
-Depending on the features used, DupliClean may access information such as:
+Depending on the features used, DupliClean may access file names, identifiers, sizes, types, dates, folders, comparison metadata, and thumbnails. To verify exact duplicates or analyze media, the app may temporarily download file content to the device and calculate hashes locally. Content downloaded for analysis is not sent to a developer-operated server.
 
-- file identifiers;
-- file names;
-- file sizes;
-- file types;
-- dates;
-- available folder information;
-- thumbnails;
-- checksums or hashes provided by Google Drive when available, such as SHA-256, SHA-1, or MD5.
+When users confirm deletion of a MEGA file in DupliClean, the app asks the MEGA SDK to move it to the account's Rubbish Bin. Retention and possible recovery depend on MEGA's rules and the user's account.
 
-For some analyses, including similar-photo detection, DupliClean may temporarily download a thumbnail provided by Google Drive in order to perform a visual comparison within the application.
-
-When the user confirms the deletion of a Google Drive file from DupliClean, the application sends a request to Google Drive to move that file to the account's trash when this operation is supported.
-
-DupliClean does not ask the user to provide their Google password directly to the application.
-
-Information received from Google APIs is used only to provide or improve user-facing DupliClean features. It is not used for advertising and is not sold.
-
-### Limited Use of Google user data
-
-DupliClean's use of raw or derived information received from Google Workspace APIs adheres to the **Google API Services User Data Policy**, including the **Limited Use** requirements.
-
-In particular:
-
-- Google user data is used only to provide or improve user-facing features requested by the user in DupliClean;
-- Google user data is not used to develop, improve, or train generalized or non-personalized artificial intelligence or machine-learning models;
-- Google user data is not transferred to third-party AI or machine-learning services for the purpose of training or improving their models;
-- Google user data is not sold or used for advertising, advertising profiling, or advertising targeting;
-- DupliClean does not create permanent copies of Google user data on a developer-operated server.
-
-Use of Google Drive remains subject to Google's applicable privacy policies and terms of use.
+Use of MEGA remains subject to MEGA's applicable privacy policies and terms of use.
 
 ## 4. Dropbox
 
@@ -383,7 +334,7 @@ Use of Dropbox remains subject to Dropbox's applicable privacy policies and term
 
 ## 5. Cloud authentication information
 
-When a user chooses to connect to Google Drive, OneDrive, or Dropbox, the authentication provider may provide DupliClean with certain information associated with the account, such as the user's name, email address, or account/user identifier.
+When a user connects to OneDrive or Dropbox, the authentication provider may provide DupliClean with account information such as a name, email address, or account identifier. For MEGA, the email address and sign-in details entered in the app are used by the MEGA SDK to start the session; the session is stored in secure storage on the device.
 
 This information is used only to authenticate the user, establish the session with the selected service, and provide the cloud features requested by the user.
 
@@ -397,6 +348,7 @@ Data accessed by DupliClean is used only to provide features requested by the us
 - analyzing files;
 - identifying exact duplicates;
 - searching for visually similar photos;
+- searching for similar videos when this option is enabled;
 - identifying large files;
 - identifying screenshots;
 - displaying results;
@@ -412,7 +364,7 @@ To identify exact duplicates, DupliClean may use technical information such as f
 
 On the Android device, DupliClean may locally calculate a SHA-256 hash of file content.
 
-For OneDrive, Google Drive, and Dropbox, DupliClean may use hashes, checksums, or comparison information available in metadata provided by the service in order to avoid unnecessarily downloading original files.
+For OneDrive, Dropbox, and MEGA, DupliClean may use hashes or comparison information available in metadata to preselect files. Some content must nevertheless be downloaded temporarily to the device to verify a match or analyze media.
 
 To identify visually similar photos, DupliClean may use an image thumbnail to calculate a perceptual hash. This feature provides a similarity estimate, and results are always shown to the user before any deletion occurs.
 
@@ -438,8 +390,8 @@ DupliClean displays detected files and allows the user to choose which files to 
 For cloud files:
 
 - OneDrive uses Microsoft services to carry out the requested deletion according to OneDrive rules;
-- Google Drive uses Google services to move the relevant files to the trash when this feature is available;
-- Dropbox uses Dropbox services to carry out the deletion explicitly requested by the user.
+- Dropbox uses Dropbox services to carry out the deletion explicitly requested by the user;
+- MEGA moves selected files to the account's Rubbish Bin.
 
 Users should review selected files before confirming a deletion.
 
@@ -450,8 +402,8 @@ DupliClean does not sell users' personal data and does not share users' files wi
 When a user uses a cloud feature, certain information required for the operation is exchanged with the relevant service provider:
 
 - Microsoft for OneDrive;
-- Google for Google Drive;
-- Dropbox for Dropbox.
+- Dropbox for Dropbox;
+- MEGA for MEGA.
 
 These exchanges are necessary to authenticate the user, access authorized files, retrieve required metadata or thumbnails, and perform actions requested by the user.
 
@@ -461,23 +413,25 @@ DupliClean does not keep permanent copies of files, photos, videos, thumbnails, 
 
 Preferences and cleanup history stored by DupliClean remain locally on the device and can be removed by clearing the app's data or uninstalling DupliClean. Cleanup history can also be cleared from within the app when that option is available.
 
-Data stored directly by Microsoft, Google, or Dropbox remains subject to those providers' retention and deletion rules.
+Thumbnails or files may be held temporarily in the app cache on the device for analysis or preview. Users can clear the app's data in Android to remove this cache and locally stored sessions.
+
+Data stored directly by Microsoft, Dropbox, or MEGA remains subject to those providers' retention and deletion rules.
 
 ## 12. Security
 
 DupliClean aims to limit access to data to the features required for the application to function.
 
-The application uses authentication and authorization mechanisms provided by Microsoft, Google, and Dropbox to access cloud accounts.
+The application uses Microsoft and Dropbox authentication mechanisms and the MEGA SDK to access cloud accounts.
 
-Users remain responsible for the security of their device and their Microsoft, Google, and Dropbox accounts.
+Users remain responsible for the security of their device and their Microsoft, Dropbox, and MEGA accounts.
 
 ## 13. Third-party services
 
 DupliClean may interact with the following third-party services when the user chooses to use them:
 
 - Microsoft OneDrive / Microsoft Graph;
-- Google Drive / Google APIs;
-- Dropbox / Dropbox API.
+- Dropbox / Dropbox API;
+- MEGA / MEGA SDK.
 
 These providers process certain information according to their own privacy policies and terms of use.
 

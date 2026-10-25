@@ -7,7 +7,7 @@
 
 # Français
 
-**Dernière mise à jour : 21 septembre 2026**
+**Dernière mise à jour : 24 octobre 2026**
 
 ## 1. Acceptation des conditions
 
@@ -19,13 +19,14 @@ DupliClean est une application Android qui aide l’utilisateur à analyser des 
 
 - le stockage local du téléphone ;
 - Microsoft OneDrive ;
-- Google Drive ;
-- Dropbox.
+- Dropbox ;
+- MEGA.
 
 Selon la source et les fonctionnalités utilisées, DupliClean peut aider à identifier :
 
 - des doublons exacts ;
 - des photos visuellement similaires ;
+- des vidéos similaires, lorsque cette analyse est activée ;
 - des fichiers volumineux ;
 - des captures d’écran.
 
@@ -45,7 +46,7 @@ Certaines fonctionnalités nécessitent l’autorisation d’accéder aux photos
 
 Sur les versions récentes d’Android, l’utilisateur peut accorder un accès complet ou limité à certains médias sélectionnés.
 
-Pour OneDrive, Google Drive et Dropbox, l’utilisateur doit autoriser DupliClean à accéder aux ressources nécessaires via les mécanismes d’authentification et d’autorisation fournis par Microsoft, Google ou Dropbox.
+Pour OneDrive et Dropbox, l’utilisateur doit autoriser DupliClean à accéder aux ressources nécessaires via les mécanismes fournis par Microsoft et Dropbox. Pour MEGA, l’utilisateur se connecte dans l’application au moyen du SDK MEGA.
 
 L’utilisateur peut retirer ces autorisations à tout moment depuis Android ou depuis les paramètres de sécurité et de confidentialité du fournisseur cloud concerné.
 
@@ -53,9 +54,9 @@ L’utilisateur peut retirer ces autorisations à tout moment depuis Android ou 
 
 DupliClean ne crée pas de compte utilisateur DupliClean distinct.
 
-Lorsqu’un utilisateur se connecte à OneDrive, Google Drive ou Dropbox, l’authentification est réalisée par le fournisseur concerné. DupliClean ne demande pas à l’utilisateur de saisir directement son mot de passe Microsoft, Google ou Dropbox dans l’application.
+Pour OneDrive et Dropbox, l’authentification passe par Microsoft ou Dropbox ; DupliClean ne demande pas leurs mots de passe dans l’application. Pour MEGA, l’utilisateur saisit son adresse e-mail, son mot de passe et, si nécessaire, un code de vérification dans DupliClean. Ces informations sont transmises au SDK MEGA pour ouvrir la session ; la session est conservée dans le stockage sécurisé de l’appareil.
 
-L’utilisation de OneDrive, Google Drive et Dropbox reste soumise aux conditions d’utilisation, politiques de confidentialité et règles propres à Microsoft, Google et Dropbox.
+L’utilisation de OneDrive, Dropbox et MEGA reste soumise aux conditions d’utilisation, politiques de confidentialité et règles propres à Microsoft, Dropbox et MEGA.
 
 ## 6. Suppression des fichiers
 
@@ -63,14 +64,14 @@ Lorsque l’utilisateur confirme une suppression :
 
 - les fichiers locaux sont supprimés selon les mécanismes disponibles sur l’appareil Android ;
 - les fichiers OneDrive sont traités selon les mécanismes de suppression et de corbeille de Microsoft ;
-- les fichiers Google Drive peuvent être déplacés vers la corbeille selon les mécanismes de Google Drive ;
-- les fichiers Dropbox sont supprimés au moyen des mécanismes fournis par Dropbox après confirmation de l’utilisateur.
+- les fichiers Dropbox sont supprimés au moyen des mécanismes fournis par Dropbox après confirmation de l’utilisateur ;
+- les fichiers MEGA sont déplacés vers la corbeille du compte MEGA.
 
 DupliClean ne garantit pas qu’un fichier supprimé pourra être restauré. L’utilisateur doit vérifier les possibilités de récupération auprès de la source concernée.
 
 ## 7. Exactitude des résultats
 
-DupliClean est conçu pour aider à identifier des doublons exacts, des photos similaires, des fichiers volumineux et des captures d’écran.
+DupliClean est conçu pour aider à identifier des doublons exacts, des photos similaires, des vidéos similaires lorsque l’option est activée, des fichiers volumineux et des captures d’écran.
 
 La détection de photos similaires repose sur une estimation visuelle et peut produire des résultats qui nécessitent une vérification humaine.
 
@@ -83,7 +84,7 @@ L’utilisateur est responsable :
 - de la vérification des résultats affichés ;
 - de la sélection des fichiers à supprimer ;
 - du maintien de sauvegardes appropriées lorsque cela est nécessaire ;
-- de la sécurité de son appareil et de ses comptes Google, Microsoft et Dropbox.
+- de la sécurité de son appareil et de ses comptes Microsoft, Dropbox et MEGA.
 
 ## 9. Disponibilité du service
 
@@ -92,7 +93,7 @@ Certaines fonctionnalités peuvent dépendre :
 - de la version d’Android ;
 - des autorisations accordées ;
 - de la connexion réseau ;
-- de la disponibilité des services Microsoft, Google ou Dropbox ;
+- de la disponibilité des services Microsoft, Dropbox ou MEGA ;
 - des limites ou changements apportés par les fournisseurs cloud.
 
 DupliClean peut être modifié, amélioré ou interrompu en tout ou en partie au fil du temps.
@@ -125,7 +126,7 @@ Pour toute question concernant DupliClean ou les présentes Conditions d’utili
 
 # English
 
-**Last updated: September 21, 2026**
+**Last updated: October 24, 2026**
 
 ## 1. Acceptance of the terms
 
@@ -137,13 +138,14 @@ DupliClean is an Android application that helps users analyze files from support
 
 - local phone storage;
 - Microsoft OneDrive;
-- Google Drive;
-- Dropbox.
+- Dropbox;
+- MEGA.
 
 Depending on the source and features used, DupliClean can help identify:
 
 - exact duplicates;
 - visually similar photos;
+- similar videos when that analysis is enabled;
 - large files;
 - screenshots.
 
@@ -163,7 +165,7 @@ Some features require permission to access photos, videos, or other information 
 
 On recent Android versions, users may grant full access or limited access to selected media.
 
-For OneDrive, Google Drive, and Dropbox, users must authorize DupliClean to access the required resources through authentication and authorization mechanisms provided by Microsoft, Google, or Dropbox.
+For OneDrive and Dropbox, users must authorize DupliClean to access the required resources through mechanisms provided by Microsoft and Dropbox. For MEGA, users sign in within the app through the MEGA SDK.
 
 Users can revoke these permissions at any time through Android or through the relevant cloud provider's security and privacy settings.
 
@@ -171,9 +173,9 @@ Users can revoke these permissions at any time through Android or through the re
 
 DupliClean does not create a separate DupliClean user account.
 
-When users connect to OneDrive, Google Drive, or Dropbox, authentication is handled by the relevant provider. DupliClean does not ask users to enter their Microsoft, Google, or Dropbox password directly into the application.
+For OneDrive and Dropbox, authentication is handled by Microsoft or Dropbox; DupliClean does not ask users to enter those passwords in the app. For MEGA, users enter their email address, password, and, if required, a verification code in DupliClean. These details are passed to the MEGA SDK to start the session; the session is kept in secure storage on the device.
 
-Use of OneDrive, Google Drive, and Dropbox remains subject to the terms, privacy policies, and rules of Microsoft, Google, and Dropbox.
+Use of OneDrive, Dropbox, and MEGA remains subject to the terms, privacy policies, and rules of Microsoft, Dropbox, and MEGA.
 
 ## 6. File deletion
 
@@ -181,14 +183,14 @@ When a user confirms a deletion:
 
 - local files are deleted using the mechanisms available on the Android device;
 - OneDrive files are handled according to Microsoft's deletion and recycle-bin mechanisms;
-- Google Drive files may be moved to the trash according to Google Drive mechanisms;
-- Dropbox files are deleted using mechanisms provided by Dropbox after user confirmation.
+- Dropbox files are deleted using mechanisms provided by Dropbox after user confirmation;
+- MEGA files are moved to the account's Rubbish Bin.
 
 DupliClean does not guarantee that a deleted file can be restored. Users should verify recovery options with the relevant source.
 
 ## 7. Accuracy of results
 
-DupliClean is designed to help identify exact duplicates, visually similar photos, large files, and screenshots.
+DupliClean is designed to help identify exact duplicates, visually similar photos, similar videos when enabled, large files, and screenshots.
 
 Similar-photo detection is based on a visual similarity estimate and may produce results that require human review.
 
@@ -201,7 +203,7 @@ Users are responsible for:
 - reviewing displayed results;
 - selecting files to delete;
 - maintaining appropriate backups when necessary;
-- securing their device and Google, Microsoft, and Dropbox accounts.
+- securing their device and Microsoft, Dropbox, and MEGA accounts.
 
 ## 9. Service availability
 
@@ -210,7 +212,7 @@ Some features may depend on:
 - the Android version;
 - permissions granted by the user;
 - network connectivity;
-- availability of Microsoft, Google, or Dropbox services;
+- availability of Microsoft, Dropbox, or MEGA services;
 - limitations or changes introduced by cloud providers.
 
 DupliClean may be modified, improved, or discontinued in whole or in part over time.
