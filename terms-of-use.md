@@ -108,6 +108,8 @@ Cette politique décrit notamment l’accès aux fichiers, l’utilisation des d
 
 DupliClean utilise des bibliothèques logicielles de tiers. Les avis et les textes des licences sont disponibles sur la page [Licences tierces](third-party-licenses.md).
 
+En particulier, DupliClean utilise **FFmpegKit / FFmpeg**, distribués sous les conditions LGPL applicables à cette version, ainsi que **JCodec** sous licence BSD-2-Clause. Les droits des utilisateurs sur ces composants libres, y compris la modification des bibliothèques et l'ingénierie inverse nécessaire au débogage de ces modifications lorsqu'elle est permise par leur licence, ne sont pas restreints par les présentes Conditions. Les [sources et informations de construction publiées](licenses/FFMPEGKIT-SOURCES-AND-REBUILD.md) sont également accessibles. Le code propriétaire de DupliClean demeure soumis à ses propres conditions.
+
 ## 11. Langues
 
 DupliClean est actuellement disponible en français, anglais, italien, espagnol, allemand et portugais.
@@ -230,6 +232,8 @@ That policy describes, among other things, file access, use of data required for
 ### Third-party licenses
 
 DupliClean uses third-party software libraries. Their notices and full license texts are available on the [Third-party licenses](third-party-licenses.md) page.
+
+In particular, DupliClean uses **FFmpegKit / FFmpeg** under the LGPL terms applicable to this build and **JCodec** under BSD-2-Clause. These Terms do not restrict users' rights in those open-source components, including library modification and reverse engineering for debugging such modifications where permitted by the relevant licenses. [Published source and build information](licenses/FFMPEGKIT-SOURCES-AND-REBUILD.md) is also available. DupliClean's proprietary code remains subject to its separate terms.
 
 ## 11. Languages
 
