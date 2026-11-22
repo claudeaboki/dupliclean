@@ -104,6 +104,10 @@ L’utilisation de DupliClean est également régie par la Politique de confiden
 
 Cette politique décrit notamment l’accès aux fichiers, l’utilisation des données nécessaires à l’authentification cloud, le stockage local des préférences et de l’historique, ainsi que la gestion des données.
 
+### Licences tierces
+
+DupliClean utilise des bibliothèques logicielles de tiers. Les avis et les textes des licences sont disponibles sur la page [Licences tierces](third-party-licenses.md).
+
 ## 11. Langues
 
 DupliClean est actuellement disponible en français, anglais, italien, espagnol, allemand et portugais.
@@ -222,6 +226,10 @@ DupliClean may be modified, improved, or discontinued in whole or in part over t
 Use of DupliClean is also governed by the DupliClean Privacy Policy.
 
 That policy describes, among other things, file access, use of data required for cloud authentication, local storage of preferences and cleanup history, and data management.
+
+### Third-party licenses
+
+DupliClean uses third-party software libraries. Their notices and full license texts are available on the [Third-party licenses](third-party-licenses.md) page.
 
 ## 11. Languages
 
