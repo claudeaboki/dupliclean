@@ -61,3 +61,8 @@ All copyrights remain with their respective owners. The full license texts gover
 ---
 
 [Politique de confidentialité / Privacy policy](privacy-policy.md) · [Conditions d'utilisation / Terms of use](terms-of-use.md) · [Gestion des données / Data deletion](data-deletion.md)
+
+
+### Sources et reconstruction FFmpegKit / FFmpeg — FFmpegKit / FFmpeg source and rebuild information
+
+[Documentation des sources et de reconstruction de la version distribuée / Source and rebuild documentation for the distributed version](licenses/FFMPEGKIT-SOURCES-AND-REBUILD.md). Ce document présente les empreintes de provenance vérifiées et les obligations LGPL qui restent à valider ; il **ne constitue pas une attestation de conformité complète**. / This document records verified provenance hashes and the remaining LGPL checks; it **is not a certification of full compliance**.
