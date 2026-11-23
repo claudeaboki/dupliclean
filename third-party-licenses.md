@@ -63,6 +63,10 @@ All copyrights remain with their respective owners. The full license texts gover
 [Politique de confidentialité / Privacy policy](privacy-policy.md) · [Conditions d'utilisation / Terms of use](terms-of-use.md) · [Gestion des données / Data deletion](data-deletion.md)
 
 
+### Guide Android de reconstruction et de remplacement / Android rebuild and replacement guide
+
+[Guide technique bilingue pour la reconstruction, la signature indépendante et les essais de remplacement LGPL](licenses/FFMPEGKIT-LGPL-TECHNICAL-GUIDE.md). La démonstration Samsung porte sur une modification ELF non fonctionnelle : **elle ne certifie pas la reconstruction reproductible d'une bibliothèque modifiée à partir des sources**. / The Samsung test used a nonfunctional ELF-section change: **it does not establish reproducible rebuilding of a modified library from source**.
+
 ### Sources et reconstruction FFmpegKit / FFmpeg — FFmpegKit / FFmpeg source and rebuild information
 
 [Documentation des sources et de reconstruction de la version distribuée / Source and rebuild documentation for the distributed version](licenses/FFMPEGKIT-SOURCES-AND-REBUILD.md). Ce document présente les empreintes de provenance vérifiées et les obligations LGPL qui restent à valider ; il **ne constitue pas une attestation de conformité complète**. / This document records verified provenance hashes and the remaining LGPL checks; it **is not a certification of full compliance**.
