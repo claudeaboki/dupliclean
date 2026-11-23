@@ -2,6 +2,8 @@
 
 **Portée / Scope** : paquet Android `com.dupliclean.app`, FFmpegKit Android `min` `8.1.2`, JCodec `0.2.5`.
 
+> **Rectification DUP071-28 — 22 novembre 2026 / Critical source-version correction.** Le binaire FFmpeg réellement distribué (`libavcodec.so`, SHA-256 `a01398fde2967e09ba8c01a578094b06fc72273f7c82a02f13e1bf2896afae83`) contient `FFmpeg version n8.1.2`. Or `scripts/source.sh` au commit FFmpegKit `d28006b5...` pointe vers `n7.1.5`. Ce n'est **pas la version source correspondante**. Le code source FFmpeg **n8.1.2**, commit `38b88335f99e76ed89ff3c93f877fdefce736c13`, est la nouvelle base candidate; la révision et les correctifs exacts du build fournisseur ne sont pas encore prouvés. Le script historique `scripts/android/ffmpeg.sh` tente de remplacer `static int av_log_level`; le source FFmpeg 8.1.2 utilise `static atomic_int av_log_level` : il ne faut pas exécuter cette recette en supposant qu'elle produit le binaire publié. / The distributed binary embeds FFmpeg n8.1.2, while the referenced historical build script selects n7.1.5. Do not treat the older script as corresponding source. The source-level patches used by the supplier still require verification.
+
 **Statut / Status** : ce guide documente les sources de référence et une démonstration technique de reconditionnement. Il **ne certifie pas la conformité complète** : un remplacement fonctionnel reconstruit à partir des sources et la mise à disposition d'une archive exhaustive des sources correspondantes restent à finaliser. / This guide documents pinned upstream sources and a repackaging demonstration. It **does not certify full compliance**: a functional replacement rebuilt from source and complete corresponding-source delivery remain outstanding.
 
 ## Français
@@ -9,9 +11,9 @@
 ### Sources précisément identifiées
 
 - **FFmpegKit Android** : [sources au commit `d28006b5b718a324b89962e70feedc4512c5942a`](https://github.com/maitrungduc1410/ffmpeg-kit/tree/d28006b5b718a324b89962e70feedc4512c5942a) (tag `android-8.1.2`).
-- **FFmpeg** : [sources au commit `3a0867c2bfda4a4d4309ca1a8cbdc6175e67f587`](https://github.com/arthenica/FFmpeg/tree/3a0867c2bfda4a4d4309ca1a8cbdc6175e67f587), tag `n7.1.5`, tel que déclaré dans `scripts/source.sh` du fournisseur.
+- **FFmpeg présent dans le binaire — source candidate (non certifiée)** : [`arthenica/FFmpeg`, tag `n8.1.2`, commit `38b88335f99e76ed89ff3c93f877fdefce736c13`](https://github.com/arthenica/FFmpeg/tree/38b88335f99e76ed89ff3c93f877fdefce736c13). Le fichier historique `scripts/source.sh` pointe vers `n7.1.5` : **cette référence est incorrecte pour l'AAR publié**.
 - **Modifications ajoutées par les scripts FFmpegKit** : voir `scripts/android/ffmpeg.sh` (modifications de `libavutil/log.c` et fichiers des protocoles `tools/protocols` entre autres), avec les scripts de la même révision.
-- **Configuration déclarée pour Android** : workflow `.github/workflows/android-build-scripts.yml`, NDK `r27c`, variante `min`, paramètres communs `--enable-android-media-codec --enable-android-zlib --disable-arm-v7a --disable-x86 --disable-x86-64`. Le script FFmpeg demande `--disable-static --enable-shared --enable-version3`; `--enable-gpl` n'est appliqué que si son option a été explicitement demandée. **La configuration réelle de la compilation publiée n'est pas encore établie à partir du `ffbuild/config.log` d'origine.**
+- **Configuration déclarée pour Android** : workflow `.github/workflows/android-build-scripts.yml`, NDK `r27c`, variante `min`, paramètres communs `--enable-android-media-codec --enable-android-zlib --disable-arm-v7a --disable-x86 --disable-x86-64`. Le script FFmpeg demande `--disable-static --enable-shared --enable-version3`; `--enable-gpl` n'est appliqué que si son option a été explicitement demandée. **Cette recette est historiquement incohérente avec la version native 8.1.2 : ne pas l'utiliser comme instructions de reconstruction correspondantes.** La configuration enregistrée dans les binaires a été extraite (DUP071-27), mais le journal `ffbuild/config.log` d'origine demeure indisponible.
 - **Binaires de référence** : [AAR du fournisseur](https://github.com/maitrungduc1410/ffmpeg-kit/releases/tag/android-8.1.2). SHA-256 de l'AAR `min` : `53e3f17a8971eabc03910db1e6d59366ca1961031f98ef3f84ec925cb1fe478c`.
 
 Les rapports locaux DUP071-20/21 ont confirmé que les **huit fichiers ARM64 FFmpeg** dans l'AAB de production et l'AAR du fournisseur ont des empreintes SHA-256 identiques. Ce contrôle ne vaut pas reproduction de la compilation.
@@ -47,7 +49,7 @@ L'AAB de production original n'a pas été modifié lors de cette opération.
 
 ## English (summary)
 
-The precise upstream references are **FFmpegKit commit `d28006b5b718a324b89962e70feedc4512c5942a`** and **FFmpeg tag `n7.1.5` / commit `3a0867c2bfda4a4d4309ca1a8cbdc6175e67f587`**, with FFmpegKit's source modifications and Android workflow at the pinned commit.
+**Correction:** the shipped binary identifies **FFmpeg n8.1.2**, candidate upstream commit **`38b88335f99e76ed89ff3c93f877fdefce736c13`**. The FFmpegKit commit **`d28006b5b718a324b89962e70feedc4512c5942a`** referenced previously instead selects **n7.1.5** and is **not established as the build source for the supplied AAR**. Exact source-level modifications and build commit still require verification.
 
 The eight arm64 FFmpeg shared libraries in the candidate AAB were byte-for-byte matched to the distributor's AAR. A test APK was created using a non-loaded ELF diagnostic section in `libavutil.so`, repackaged, signed with an existing independent Android Debug key, installed, and reported working on a Samsung phone. No source-level codec modification or reproducible build was proven.
 
