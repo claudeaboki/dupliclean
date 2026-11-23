@@ -7,7 +7,7 @@
 
 # Français
 
-**Dernière mise à jour : 24 octobre 2026**
+**Dernière mise à jour : 22 Novembre 2026**
 
 ## 1. Acceptation des conditions
 
@@ -132,7 +132,7 @@ Pour toute question concernant DupliClean ou les présentes Conditions d’utili
 
 # English
 
-**Last updated: October 24, 2026**
+**Last updated: November 22, 2026**
 
 ## 1. Acceptance of the terms
 
