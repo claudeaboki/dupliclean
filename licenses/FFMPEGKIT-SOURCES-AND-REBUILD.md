@@ -22,6 +22,16 @@ At the pinned commit, the Android workflow specifies NDK `r27c-linux`, the **min
 
 **Limite / Limitation** : ces scripts documentent une recette, mais nous n'avons pas reproduit indépendamment la construction à partir de ces sources ni vérifié le `config.log` original du fournisseur. Une recette publiée et une archive binaire identifiée ne prouvent pas, à elles seules, l'intégralité des paramètres et modifications effectivement utilisés. / These scripts document a build recipe, but no independent rebuild or inspection of the distributor's original `config.log` has been completed.
 
+### Contrôle direct de la configuration native / Direct native configuration inspection — DUP071-27
+
+Le 22 novembre 2026, nous avons extrait en lecture seule la chaîne de configuration FFmpeg depuis les huit bibliothèques ARM64 d'un APK expérimental dérivé de l'AAB candidat. Les **huit chaînes sont identiques**, de **1 442 octets** et de SHA-256 `e84d0c7659f5b227b6aaf258750cf3171974324c78803b899676e1428807f89f`. Les bibliothèques non modifiées (dont `libavcodec.so`, SHA-256 `a01398fde2967e09ba8c01a578094b06fc72273f7c82a02f13e1bf2896afae83`) correspondent aux fichiers du fournisseur selon l'audit DUP071-21. Dans cet APK expérimental, **`libavutil.so` seule porte une section ELF de diagnostic non chargée** ; sa chaîne de configuration est inchangée.
+
+Les paramètres enregistrés comprennent **Android ARM64, NDK r27c**, `--enable-version3`, `--disable-static`, `--enable-shared`, `--enable-zlib`, `--enable-mediacodec`, `--disable-autodetect`. **`--enable-gpl` et `--enable-nonfree` ne figurent pas dans la chaîne.** Ce contrôle porte sur les **binaires** : il ne démontre ni la révision source exacte qui a produit l'AAR, ni l'absence de toute dépendance incompatible, ni une compilation reproductible.
+
+On 22 November 2026, the recorded FFmpeg configuration string was extracted from eight ARM64 shared libraries in an experimental APK derived from the candidate AAB. All eight strings match (1,442 bytes; SHA-256 above), and the unmodified libraries match the supplier's binaries. The recorded options include shared linking and NDK r27c and do not contain `--enable-gpl` or `--enable-nonfree`. This provides **binary-level evidence**, not independently reproduced corresponding sources or an exhaustive third-party license audit.
+
+**Recette d'interface / UI validation:** The developer has also confirmed successful operation on Samsung of the newly added *Third-party licenses* page in DupliCleanTest, with offline texts, supported languages and scans. This TEST validation requires a fresh production AAB before release.
+
 ## 3. Traçabilité DupliClean / DupliClean traceability
 
 Selon le rapport d'audit local `DUP071-21` (22 novembre 2026, 18:17) / According to the local `DUP071-21` audit report (2026-11-22, 18:17):
@@ -37,9 +47,9 @@ Les bibliothèques FFmpeg couvertes par la LGPL conservent leurs licences et dro
 
 The LGPL-covered FFmpeg libraries retain their respective licenses and user rights. DupliClean **does not prohibit** modification of those libraries or reverse engineering for debugging modifications to LGPL-covered components as permitted by the applicable licenses. This does not license DupliClean's proprietary code under the LGPL.
 
-**Remplacement / Replacement** : les fichiers FFmpeg sont des bibliothèques Android partagées `.so`, mais leur remplacement réel dans une application installable (reconditionnement d'APK et nouvelle signature, compatibilité d'interface, comportement avec une version modifiée, contraintes Play App Signing) **n'a pas encore été démontré**. L'utilisateur peut demander les instructions de reconstruction, les sources correspondantes et les éléments nécessaires à l'exercice de ses droits ; toute demande sera examinée selon les obligations applicables.
+**Remplacement / Replacement** : les fichiers FFmpeg sont des bibliothèques Android partagées `.so`. Un test DUP071-22D a permis de remplacer un `.so` par une version dotée d'une section ELF de diagnostic **non chargée**, puis de reconditionner et signer un APK avec une clé Debug indépendante ; le développeur a confirmé que l'APK s'installe et que les scans fonctionnent sur Samsung. **Un remplacement fonctionnel issu de sources recompilées n'a pas été démontré**. L'utilisateur peut demander les instructions de reconstruction, les sources correspondantes et les éléments nécessaires à l'exercice de ses droits ; toute demande sera examinée selon les obligations applicables.
 
-The FFmpeg files are Android shared `.so` libraries, but actual replacement in an installable application (APK repackaging and re-signing, interface compatibility, behavior with a modified version, Play App Signing constraints) **has not yet been demonstrated**. Users may request corresponding sources, rebuild instructions and materials necessary to exercise their rights; requests will be addressed under applicable licenses.
+FFmpeg uses Android shared `.so` libraries. In DUP071-22D a library containing an additional **non-loaded ELF diagnostic section** was repackaged and the APK was signed with a separate Debug key; the developer confirmed installation and functioning scans on Samsung. **Replacement with a functionally modified library rebuilt from source has not been demonstrated.** Users may request corresponding sources, rebuild instructions and materials necessary to exercise their rights; requests will be addressed under applicable licenses.
 
 ## 5. Travaux non encore démontrés / Outstanding verification
 
