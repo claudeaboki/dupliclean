@@ -37,6 +37,22 @@ On 22 November 2026, the recorded FFmpeg configuration string was extracted from
 
 **Recette d'interface / UI validation:** The developer has also confirmed successful operation on Samsung of the newly added *Third-party licenses* page in DupliCleanTest, with offline texts, supported languages and scans. This TEST validation requires a fresh production AAB before release.
 
+## DUP071-29 — Chronologie vérifiée de la publication / Verified publisher chronology (2026-11-22)
+
+**Constat / Finding:** l'archive Android `ffmpeg-kit-min-8.1.2.aar` de la release `android-8.1.2` a été créée le **4 juillet 2026 à 14:59:31 UTC**. Le commit du fournisseur [`e15206ec7b29aff45853571f98308570166f2dca`](https://github.com/maitrungduc1410/ffmpeg-kit/commit/e15206ec7b29aff45853571f98308570166f2dca), qui déclare explicitement le passage des scripts de FFmpeg 7.1.5 à **8.1.2**, est daté du **4 juillet 2026 à 15:23:39 UTC**, **après** la création de l'archive publique. Le commit de publication [`d28006b5b718a324b89962e70feedc4512c5942a`](https://github.com/maitrungduc1410/ffmpeg-kit/commit/d28006b5b718a324b89962e70feedc4512c5942a) désigne encore FFmpeg 7.1.5 dans `scripts/source.sh`. Cela interdit de prétendre que l'un ou l'autre commit est, sans autre preuve, la provenance de compilation de l'AAR distribué.
+
+Le [workflow fournisseur](https://github.com/maitrungduc1410/ffmpeg-kit/blob/d28006b5b718a324b89962e70feedc4512c5942a/.github/workflows/publish.yml) récupère des artefacts **déjà compilés** et accepte soit un `android_build_run_id` donné, soit la dernière compilation réussie ; il peut aussi lire un dépôt distinct via `source_repo`. Le [workflow `publish` réussi n°28710015671](https://github.com/maitrungduc1410/ffmpeg-kit/actions/runs/28710015671) du 4 juillet 2026 inclut la publication Android `min`, mais la provenance du run de compilation qu'il a téléchargé n'est **pas déductible** de son commit de publication. Les journaux Actions de ce run sont aujourd'hui indisponibles (réponse HTTP 410 lors de la tentative de lecture), et les artefacts de ce run ne sont pas accessibles ; il faut obtenir les paramètres effectifs `source_repo` et `android_build_run_id` ou un manifeste du fournisseur.
+
+Les archives candidates conservées côté développeur :
+
+- [FFmpeg **n8.1.2** commit `38b88335f99e76ed89ff3c93f877fdefce736c13`](https://github.com/arthenica/FFmpeg/tree/38b88335f99e76ed89ff3c93f877fdefce736c13), ZIP SHA-256 `c3453fbfc7ca25423f4984a83ceda01949d458a8bc04f9d68fab7c392f75b3ab` ;
+- [FFmpegKit **historique** commit `d28006b5b718a324b89962e70feedc4512c5942a`](https://github.com/maitrungduc1410/ffmpeg-kit/tree/d28006b5b718a324b89962e70feedc4512c5942a), ZIP SHA-256 `0fb08924baabb21683411287e0e891404806d785d5567045b53fbfe185be7f2c` — **recette n7.1.5, non correspondante** ;
+- [FFmpegKit commit **`e15206ec7b29aff45853571f98308570166f2dca`**](https://github.com/maitrungduc1410/ffmpeg-kit/tree/e15206ec7b29aff45853571f98308570166f2dca) — source 8.1.2 **candidate plus cohérente**, mais ajoutée après la création des artefacts de la release, donc **non certifiée comme la recette utilisée**.
+
+**Dépendance fournisseur encore nécessaire / Supplier evidence required:** obtenir le dépôt/run exact ayant construit `ffmpeg-kit-min-8.1.2.aar` (SHA-256 `53e3f17a8971eabc03910db1e6d59366ca1961031f98ef3f84ec925cb1fe478c`), le commit FFmpegKit, le commit FFmpeg exact et les patchs appliqués, les scripts et paramètres `configure`, les dépendances intégrées, les fichiers `config.log` et une procédure de reconstruction. Une identification de version `n8.1.2` et des archives sources candidates ne suffisent pas à attester des sources *exactement correspondantes* ni de l'intégralité des obligations LGPL.
+
+**English:** The public AAR was created at 14:59:31 UTC on 4 July 2026. The publisher's commit updating source scripts to FFmpeg 8.1.2 was made at 15:23:39 UTC, after that artifact. The public publishing workflow can reuse prebuilt artifacts from another run or repository. The exact CI build run, repository, build commit, patches and source tree remain unknown. The n8.1.2 source and post-release FFmpegKit revision are **candidates only**; upstream build provenance is required before a complete corresponding-source claim.
+
 ## 3. Traçabilité DupliClean / DupliClean traceability
 
 Selon le rapport d'audit local `DUP071-21` (22 novembre 2026, 18:17) / According to the local `DUP071-21` audit report (2026-11-22, 18:17):
