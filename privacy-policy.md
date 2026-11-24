@@ -7,7 +7,7 @@
 
 # Français
 
-**Dernière mise à jour : 18 septembre 2026**
+**Dernière mise à jour : 22 Novembre 2026**
 
 DupliClean est une application mobile Android permettant aux utilisateurs d’analyser et de gérer des fichiers présents sur leur appareil, dans Microsoft OneDrive, dans Dropbox et dans MEGA.
 
@@ -231,7 +231,7 @@ Pour toute question concernant cette politique de confidentialité ou l’utilis
 
 # English
 
-**Last updated: September 18, 2026**
+**Last updated: November 22, 2026**
 
 DupliClean is an Android mobile application that allows users to analyze and manage files stored on their device, in Microsoft OneDrive, in Dropbox, and in MEGA.
 
