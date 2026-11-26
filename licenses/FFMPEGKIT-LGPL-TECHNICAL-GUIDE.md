@@ -1,5 +1,25 @@
 # DupliClean 1.2.3 (20) — Guide technique LGPL / LGPL technical guide
 
+## État actuel au 26 novembre 2026 / Current status (November 26, 2026)
+
+**Ce document concerne le candidat Android 1.2.3 (20), non encore distribué sur Google Play. Les sections historiques ci-dessous décrivent les anciens essais avec l'AAR fournisseur et sont conservées uniquement pour la traçabilité ; elles ne décrivent plus la configuration actuelle.**
+
+**This document concerns the Android 1.2.3 (20) candidate, not yet distributed through Google Play. Historical sections below describe the previous distributor-AAR investigation and are retained for traceability only.**
+
+- [Release publique des sources, licences et preuves / Public source, license and build-evidence release](https://github.com/claudeaboki/DupliClean-LGPL/releases/tag/dupliclean-1.2.3-ffmpegkit-8.1.2), 14 assets verified against the collection manifest.
+- FFmpegKit: [e15206ec7b29aff45853571f98308570166f2dca](https://github.com/maitrungduc1410/ffmpeg-kit/tree/e15206ec7b29aff45853571f98308570166f2dca); FFmpeg: [38b88335f99e76ed89ff3c93f877fdefce736c13](https://github.com/arthenica/FFmpeg/tree/38b88335f99e76ed89ff3c93f877fdefce736c13).
+- [Baseline rebuild evidence](https://github.com/claudeaboki/DupliClean-LGPL/releases/download/dupliclean-1.2.3-ffmpegkit-8.1.2/ffmpegkit-min-baseline-45522659807.zip); baseline AAR SHA-256 `9acdf35944f494c15028da80781aa3b786373600e4b370b92a4d237c5f113f81`. Configuration evidence: CONFIG_GPL=0, CONFIG_NONFREE=0, CONFIG_LGPLV3=1, CONFIG_SHARED=1, CONFIG_STATIC=0. Not claimed byte-identical to the previous distributor AAR.
+- [Source-modified experiment](https://github.com/claudeaboki/DupliClean-LGPL/actions/runs/45527055955): source-level version marker observed in a separately signed experimental APK on Samsung. Not distributed as a production library.
+- DUP071-47Q/47T/47U: direct Gradle integration of the 18 baseline native binaries; ARM64 Samsung cold test: 3 WMV2 FFmpegKit and 4 MPEG2 JCodec fingerprints successful, zero specialized decoder failures. DUP071-47V: permanent local AAR integration.
+- [Guide de reconstruction et remplacement / Rebuild and replacement guide](https://github.com/claudeaboki/DupliClean-LGPL/releases/download/dupliclean-1.2.3-ffmpegkit-8.1.2/GUIDE-REBUILD-REPLACEMENT.md) and [SHA-256 manifest](https://github.com/claudeaboki/DupliClean-LGPL/releases/download/dupliclean-1.2.3-ffmpegkit-8.1.2/SHA256SUMS.txt).
+- CPU Features 0.8.0 (Apache-2.0), Smart Exception Java/Common 0.2.1 (BSD-3-Clause), JCodec 0.2.5 (BSD-2-Clause): see [notices](../third-party-licenses.md).
+
+**Limites / Limits:** the source release and native replacement demonstration do not establish full compliance. The Java FFmpegKit wrapper is merged into optimized DEX. A practical recombination method or suitable alternative under LGPL v3 §4(d), applicable installation information under §4(e), final APK/AAB checks, and validation of the distribution-specific notices remain outstanding. The released source assets are not a complete application recombination kit. The proprietary source and private signing keys are not published. / La recombinaison Java, les informations d'installation applicables et la validation de la distribution finale restent ouvertes. Aucun AAB final ni certification juridique à ce stade.
+
+---
+
+## Archive historique / Historical archive — superseded for the rebuilt candidate
+
 **Portée / Scope** : paquet Android `com.dupliclean.app`, FFmpegKit Android `min` `8.1.2`, JCodec `0.2.5`.
 
 > **Rectification DUP071-28 — 22 novembre 2026 / Critical source-version correction.** Le binaire FFmpeg réellement distribué (`libavcodec.so`, SHA-256 `a01398fde2967e09ba8c01a578094b06fc72273f7c82a02f13e1bf2896afae83`) contient `FFmpeg version n8.1.2`. Or `scripts/source.sh` au commit FFmpegKit `d28006b5...` pointe vers `n7.1.5`. Ce n'est **pas la version source correspondante**. Le code source FFmpeg **n8.1.2**, commit `38b88335f99e76ed89ff3c93f877fdefce736c13`, est la nouvelle base candidate; la révision et les correctifs exacts du build fournisseur ne sont pas encore prouvés. Le script historique `scripts/android/ffmpeg.sh` tente de remplacer `static int av_log_level`; le source FFmpeg 8.1.2 utilise `static atomic_int av_log_level` : il ne faut pas exécuter cette recette en supposant qu'elle produit le binaire publié. / The distributed binary embeds FFmpeg n8.1.2, while the referenced historical build script selects n7.1.5. Do not treat the older script as corresponding source. The source-level patches used by the supplier still require verification.
